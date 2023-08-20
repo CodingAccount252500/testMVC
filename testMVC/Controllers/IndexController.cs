@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using testMVC.DTO.Req;
 
 namespace testMVC.Controllers
 {
@@ -24,7 +25,19 @@ namespace testMVC.Controllers
 			return View();
 		}
 
+		[HttpPost]
+		public IActionResult Login(string email,string password)
+		{
+			return View();
+		}
+
 		public IActionResult RegstarInCourse()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult RegstarInCourse(CourseRegstration model)
 		{
 			return View();
 		}
