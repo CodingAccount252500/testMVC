@@ -16,6 +16,9 @@ namespace testMVC.Models
         public string? PhoneNumber { get; set; }
         public string? Image { get; set; }
         public DateTime? BirthDate { get; set; }
+        public string? Key { get; set; }
+        public string? Iv { get; set; }
+        public string? Password { get; set; }
 
         public virtual ICollection<UserCourse> UserCourses { get; set; }
     }

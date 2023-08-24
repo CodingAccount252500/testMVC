@@ -76,9 +76,19 @@ namespace testMVC.Models
 
                 entity.Property(e => e.Image).IsUnicode(false);
 
+                entity.Property(e => e.Iv)
+                    .IsUnicode(false)
+                    .HasColumnName("IV");
+
+                entity.Property(e => e.Key)
+                    .IsUnicode(false)
+                    .HasColumnName("key");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Password).IsUnicode(false);
 
                 entity.Property(e => e.PhoneNumber)
                     .HasMaxLength(13)
