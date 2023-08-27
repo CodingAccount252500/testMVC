@@ -1,14 +1,7 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using NuGet.Protocol.Plugins;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
-using System.Text;
 using testMVC.DTO.Req;
-
-using testMVC.Helper;
 using testMVC.Models;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace testMVC.Controllers
 {
@@ -101,6 +94,7 @@ namespace testMVC.Controllers
 		}
 
 		[HttpPost]
+		[Route("[action]")]
 		public IActionResult Login(string email,string password)
 		{
 			email = Helper.Helper.GenerateSHA384String(email);

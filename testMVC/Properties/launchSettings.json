@@ -9,6 +9,7 @@
   },
   "profiles": {
     "testMVC": {
+      "$schema": "https://json.schemastore.org/launchsettings.json",
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
