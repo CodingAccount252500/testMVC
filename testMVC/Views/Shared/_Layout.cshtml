@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Course</title>
+<title>LMS - @ViewBag.PageTitle</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Course Project">
@@ -36,19 +38,17 @@
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">home</a></li>
-						<li class="main_nav_item"><a href="#">about us</a></li>
-						<li class="main_nav_item"><a href="courses.html">courses</a></li>
-						<li class="main_nav_item"><a href="elements.html">elements</a></li>
-						<li class="main_nav_item"><a href="news.html">news</a></li>
-						<li class="main_nav_item"><a href="contact.html">contact</a></li>
+						<li class="main_nav_item"><a asp-action="Index">home</a></li>
+							<li class="main_nav_item"><a asp-action="Courses">Courses</a></li>
+							<li class="main_nav_item"><a href="@Url.Action("Siginin","Index")">Login</a></li>
+							<li class="main_nav_item"><a asp-action="Register">Register</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 			<img src="~/Design/images/phone-call.svg" alt="">
-			<span>+43 4566 7788 2457</span>
+			<span>+962 787700833</span>
 		</div>
 
 		<!-- Hamburger -->
@@ -168,14 +168,11 @@
 					<!-- Footer Column - Usefull Links -->
 
 					<div class="col-lg-3 footer_col">
-						<div class="footer_column_title">Usefull Links</div>
+						<div class="footer_column_title">Our Instructors</div>
 						<div class="footer_column_content">
 							<ul>
-								<li class="footer_list_item"><a href="#">Testimonials</a></li>
-								<li class="footer_list_item"><a href="#">FAQ</a></li>
-								<li class="footer_list_item"><a href="#">Community</a></li>
-								<li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-								<li class="footer_list_item"><a href="#">Tuitions</a></li>
+									
+								
 							</ul>
 						</div>
 					</div>

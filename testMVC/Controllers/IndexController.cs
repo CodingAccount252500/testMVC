@@ -15,17 +15,23 @@ namespace testMVC.Controllers
 		}
         public IActionResult Index()
 		{
+			ViewBag.PageTitle = "Main";
 			var result = _context.Courses.ToList();
-
-			return View(result);
+			return View(_context);
 		}
-
+		public JsonResult CoursesJson()
+		{
+			ViewBag.PageTitle = "Courses";
+			var sortedcourses = _context.Courses.OrderBy( x => x.Title).ToList();
+			return new JsonResult(sortedcourses);
+		}
 
 		public IActionResult Courses()
 		{
-            //var result = _context.Courses.ToList();
-			var sortedcourses = _context.Courses.OrderBy( x => x.Title);
-            return View(sortedcourses);
+			ViewBag.PageTitle = "Courses";
+			//var result = _context.Courses.ToList();
+			// var sortedcourses = _context.Courses.OrderBy( x => x.Title).ToList();
+            return View(_context);
 		}
 
 		public IActionResult Register()
@@ -88,9 +94,9 @@ namespace testMVC.Controllers
             return View();
         }
 
-        public IActionResult Login()
+        public IActionResult Siginin()
 		{
-			return View();
+			return View("Login");
 		}
 
 		[HttpPost]
